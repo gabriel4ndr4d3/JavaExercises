@@ -60,5 +60,17 @@ public class Calculator {
 
             System.out.printf("Resultado: %.2f", a * b);
         }
+
+        if (op.equals("d")) {
+            System.out.print("a: ");
+            double a = scanner.nextDouble();
+
+            System.out.print("b: ");
+            double b = scanner.nextDouble();
+
+            System.out.println();
+
+            System.out.printf("Resultado: %.2f", a / b);
+        }
     }
 }
