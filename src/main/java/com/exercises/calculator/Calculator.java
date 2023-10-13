@@ -84,5 +84,14 @@ public class Calculator {
 
             System.out.printf("Resultado: %.2f", Math.pow(a, b));
         }
+
+        if (op.equals("r")) {
+            System.out.print("a: ");
+            double a = scanner.nextDouble();
+
+            System.out.println();
+
+            System.out.printf("Resultado: %.2f", Math.sqrt(a));
+        }
     }
 }
