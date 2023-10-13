@@ -23,7 +23,7 @@ public abstract class IOTest {
 
     protected List<String> getOutputs() {
         String output = outContent.toString();
-        return Arrays.asList(output.split("\r\n"));
+        return Arrays.asList(output.split("\n"));
     }
 
     protected void setInputs(List<String> inputs) {

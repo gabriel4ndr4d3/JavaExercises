@@ -1,8 +1,5 @@
 package com.exercises.calculator;
 
-import com.sun.org.apache.xpath.internal.operations.Equals;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -35,7 +32,21 @@ public class Calculator {
             System.out.print("b: ");
             double b = scanner.nextDouble();
 
+            System.out.println();
+
             System.out.printf("Resultado: %.2f", a + b);
+        }
+
+        if (op.equals("s")) {
+            System.out.print("a: ");
+            double a = scanner.nextDouble();
+
+            System.out.print("b: ");
+            double b = scanner.nextDouble();
+
+            System.out.println();
+
+            System.out.printf("Resultado: %.2f", a - b);
         }
     }
 }

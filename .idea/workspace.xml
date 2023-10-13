@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d778176-6e12-4808-a044-e406e07d7ceb" name="Changes" comment="docs: create README">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9d778176-6e12-4808-a044-e406e07d7ceb" name="Changes" comment="implementado a adição">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/exercises/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exercises/calculator/Calculator.java" afterDir="false" />
     </list>
@@ -43,6 +41,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -79,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CalculatorTest.testRandomSum">
+  <component name="RunManager" selected="Gradle.Test calculator">
     <configuration name="Run calculator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.exercises.calculator.Calculator" />
       <module name="Exercises_in_Java.main" />
@@ -92,6 +103,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="CalculatorTest.testRandomMinus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.exercises.calculator.CalculatorTest.testRandomMinus&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="CalculatorTest.testRandomSum" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -157,11 +192,13 @@
     <list>
       <item itemvalue="Application.Run calculator" />
       <item itemvalue="Gradle.Test calculator" />
+      <item itemvalue="Gradle.CalculatorTest.testRandomMinus" />
       <item itemvalue="Gradle.CalculatorTest.testRandomSum" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CalculatorTest.testRandomSum" />
+        <item itemvalue="Gradle.CalculatorTest.testRandomMinus" />
       </list>
     </recent_temporary>
   </component>
@@ -326,8 +363,39 @@
       <option name="project" value="LOCAL" />
       <updated>1697132153710</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="implementado a adição">
+      <option name="closed" value="true" />
+      <created>1697203257619</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697203257619</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit: empty project" />
@@ -336,6 +404,7 @@
     <MESSAGE value="chore: update README" />
     <MESSAGE value="feat: create Calculator exercise" />
     <MESSAGE value="docs: create README" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: create README" />
+    <MESSAGE value="implementado a adição" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementado a adição" />
   </component>
 </project>
