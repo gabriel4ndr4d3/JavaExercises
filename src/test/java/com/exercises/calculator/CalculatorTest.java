@@ -1,11 +1,8 @@
 package com.exercises.calculator;
 
 import com.exercises.IOTest;
-import com.exercises.util.ListUtil;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +21,7 @@ public class CalculatorTest extends IOTest {
 
         String expected = String.format("Resultado: %.2f", a + b);
 
-        setInputs(Arrays.asList("a", String.valueOf(a), String.valueOf(b)));
+        setInput("a", String.valueOf(a), String.valueOf(b));
 
         // when
 
@@ -32,9 +29,7 @@ public class CalculatorTest extends IOTest {
 
         // then
 
-        List<String> outputs = getOutputs();
-
-        String actual = ListUtil.getLast(outputs);
+        String actual = getLastLine();
 
         assertEquals(expected, actual);
     }
@@ -49,7 +44,7 @@ public class CalculatorTest extends IOTest {
 
         String expected = String.format("Resultado: %.2f", a - b);
 
-        setInputs(Arrays.asList("s", String.valueOf(a), String.valueOf(b)));
+        setInput("s", String.valueOf(a), String.valueOf(b));
 
         // when
 
@@ -57,9 +52,7 @@ public class CalculatorTest extends IOTest {
 
         // then
 
-        List<String> outputs = getOutputs();
-
-        String actual = ListUtil.getLast(outputs);
+        String actual = getLastLine();
 
         assertEquals(expected, actual);
     }
@@ -74,7 +67,7 @@ public class CalculatorTest extends IOTest {
 
         String expected = String.format("Resultado: %.2f", a * b);
 
-        setInputs(Arrays.asList("m", String.valueOf(a), String.valueOf(b)));
+        setInput("m", String.valueOf(a), String.valueOf(b));
 
         // when
 
@@ -82,9 +75,7 @@ public class CalculatorTest extends IOTest {
 
         // then
 
-        List<String> outputs = getOutputs();
-
-        String actual = ListUtil.getLast(outputs);
+        String actual = getLastLine();
 
         assertEquals(expected, actual);
     }
@@ -100,7 +91,7 @@ public class CalculatorTest extends IOTest {
 
         String expected = String.format("Resultado: %.2f", a / b);
 
-        setInputs(Arrays.asList("d", String.valueOf(a), String.valueOf(b)));
+        setInput("d", String.valueOf(a), String.valueOf(b));
 
         // when
 
@@ -108,9 +99,7 @@ public class CalculatorTest extends IOTest {
 
         // then
 
-        List<String> outputs = getOutputs();
-
-        String actual = ListUtil.getLast(outputs);
+        String actual = getLastLine();
 
         assertEquals(expected, actual);
     }
@@ -124,7 +113,7 @@ public class CalculatorTest extends IOTest {
 
         String expected = String.format("Resultado: %.2f", Math.sqrt(a));
 
-        setInputs(Arrays.asList("r", String.valueOf(a)));
+        setInput("r", String.valueOf(a));
 
         // when
 
@@ -132,9 +121,7 @@ public class CalculatorTest extends IOTest {
 
         // then
 
-        List<String> outputs = getOutputs();
-
-        String actual = ListUtil.getLast(outputs);
+        String actual = getLastLine();
 
         assertEquals(expected, actual);
     }
