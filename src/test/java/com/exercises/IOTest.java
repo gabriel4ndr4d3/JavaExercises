@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public abstract class IOTest {
 
@@ -14,6 +15,9 @@ public abstract class IOTest {
 
     @BeforeEach
     public final void setup() {
+
+        Locale.setDefault(Locale.ENGLISH);
+
         System.setOut(new PrintStream(outContent));
     }
 

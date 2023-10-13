@@ -1,5 +1,10 @@
 package com.exercises.calculator;
 
+import com.sun.org.apache.xpath.internal.operations.Equals;
+
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  * Crie um programa que seja capaz de realizar as seguintes operações matemáticas:
  * adição (a), subtração (s), multiplicação (m), divisão (d), potenciação (p) e raiz quadrada (r).
@@ -12,5 +17,25 @@ package com.exercises.calculator;
 public class Calculator {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("a. adição");
+        System.out.println("s. subtração");
+        System.out.println("m. multiplicação");
+        System.out.println("d. divisão");
+        System.out.println("p. potenciação");
+        System.out.println("r. raiz quadradda");
+
+        String op = scanner.next();
+
+        if (op.equals("a")) {
+            System.out.print("a: ");
+            double a = scanner.nextDouble();
+
+            System.out.print("b: ");
+            double b = scanner.nextDouble();
+
+            System.out.printf("Resultado: %.2f", a + b);
+        }
     }
 }
