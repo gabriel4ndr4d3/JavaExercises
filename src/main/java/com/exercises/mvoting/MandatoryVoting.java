@@ -1,5 +1,7 @@
 package com.exercises.mvoting;
 
+import java.util.Scanner;
+
 /**
  * Escreva um programa que avalie a obrigatoriedade do voto com base na idade de acordo com os seguintes critérios:
  * <p>
@@ -19,6 +21,18 @@ package com.exercises.mvoting;
  */
 public class MandatoryVoting {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int idade = scanner.nextInt();
+
+        if (idade < 16) {
+            System.out.println("Não vota");
+        } else {
+            if (idade < 18 || idade >= 70) {
+                System.out.println("Opcional");
+            } else {
+                System.out.println("Obrigatório");
+            }
+        }
     }
 }
