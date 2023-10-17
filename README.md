@@ -14,3 +14,4 @@ Recomendo o [IntelliJ IDEA](https://www.jetbrains.com/idea/download) como IDE, v
 
 ## Exercícios
 - [Calculator](src/main/java/com/exercises/calculator/Calculator.java)
+- [MandatoryVoting](src/main/java/com/exercises/mvoting/MandatoryVoting.java)
