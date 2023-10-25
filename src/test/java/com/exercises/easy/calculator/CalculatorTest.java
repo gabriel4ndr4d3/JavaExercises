@@ -1,6 +1,7 @@
-package com.exercises.calculator;
+package com.exercises.easy.calculator;
 
 import com.exercises.IOTest;
+import com.exercises.easy.calculator.Calculator;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;

@@ -9,9 +9,10 @@ Recomendo o [IntelliJ IDEA](https://www.jetbrains.com/idea/download) como IDE, v
 
 1. Faça um fork deste repositório.
 2. Resolva um exercício, se atentando para as **entradas** e **saídas** esperadas.
-3. Execute o teste unitário correspondente.
+3. Execute o [teste unitário](src/test) correspondente.
 4. Se o teste passar, seu exercício está correto. Caso contrário, continue tentando.
 
 ## Exercícios
-- [Calculator](src/main/java/com/exercises/calculator/Calculator.java)
-- [MandatoryVoting](src/main/java/com/exercises/mvoting/MandatoryVoting.java)
+- [Calculator](src/main/java/com/exercises/easy/calculator/Calculator.java)
+- [MandatoryVoting](src/main/java/com/exercises/easy/mandatoryvoting/MandatoryVoting.java)
+- [MandatoryVoting](src/main/java/com/exercises/easy/primenumber/PrimeNumber.java)

@@ -1,4 +1,4 @@
-package com.exercises.mvoting;
+package com.exercises.easy.mandatoryvoting;
 
 /**
  * Escreva um programa que avalie a obrigatoriedade do voto com base na idade de acordo com os seguintes critérios:
@@ -14,8 +14,6 @@ package com.exercises.mvoting;
  * <a href="https://www.tre-sc.jus.br/eleicoes/tire-suas-duvidas/voto-obrigatoriedade">Voto – obrigatoriedade</a>
  * <p>
  * O programa deve receber a idade como valor de entrada (um número inteiro) e imprimir "Opcional", "Não vota" ou "Obrigatório", dependendo da idade.
- * <p>
- * Run test: gradlew :test --tests "com.exercises.mvoting.MandatoryVotingTest"
  */
 public class MandatoryVoting {
     public static void main(String[] args) {
