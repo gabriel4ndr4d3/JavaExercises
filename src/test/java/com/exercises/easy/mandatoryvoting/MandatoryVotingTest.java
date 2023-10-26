@@ -1,4 +1,4 @@
-package com.exercises.mvoting;
+package com.exercises.easy.mandatoryvoting;
 
 import com.exercises.IOTest;
 import org.junit.jupiter.api.Test;

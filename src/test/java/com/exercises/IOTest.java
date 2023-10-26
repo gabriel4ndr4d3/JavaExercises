@@ -1,6 +1,5 @@
 package com.exercises;
 
-import com.exercises.util.ListUtil;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.io.ByteArrayInputStream;
@@ -24,21 +23,21 @@ public abstract class IOTest {
         System.setOut(new PrintStream(outContent));
     }
 
-    protected List<String> getOutputs() {
-        String output = outContent.toString();
-
-        return Arrays.asList(output.split(System.lineSeparator()));
-    }
-
     protected void setInput(String... input) {
         String joined = String.join(System.lineSeparator(), Arrays.asList(input));
 
         System.setIn(new ByteArrayInputStream(joined.getBytes()));
     }
 
+    protected List<String> getOutputs() {
+        String output = outContent.toString();
+
+        return Arrays.asList(output.split(System.lineSeparator()));
+    }
+
     protected String getLastLine() {
         List<String> outputs = getOutputs();
 
-        return ListUtil.getLast(outputs);
+        return outputs.get(outputs.size() - 1);
     }
 }
