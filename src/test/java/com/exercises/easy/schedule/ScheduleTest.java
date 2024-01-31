@@ -150,4 +150,30 @@ class ScheduleTest extends IOTest {
         );
 
     }
+
+    @Test
+    public void noContactsErrorTest() {
+
+        // given
+
+        setInput(
+                "3",
+                "0"
+        );
+
+        // when
+
+        Schedule.main(null);
+
+        // then
+
+        Predicate<String> noContactsError =
+                output -> output.endsWith(Error.NO_CONTACTS.getMessage());
+
+        assertTrue(
+                getOutputs()
+                        .stream()
+                        .anyMatch(noContactsError)
+        );
+    }
 }
