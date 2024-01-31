@@ -17,5 +17,7 @@ package com.exercises.easy.schedule;
  * 2. Veja a lista de erros a serem emitidos na classe Error desse pacote. <br>
  */
 public class Schedule {
-
+    public static void main(String[] args) {
+        
+    }
 }
