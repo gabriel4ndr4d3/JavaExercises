@@ -123,4 +123,31 @@ class ScheduleTest extends IOTest {
                         .anyMatch(invalidIndexError)
         );
     }
+
+    @Test
+    public void invalidOptionErrorTest() {
+
+        // given
+
+        setInput(
+                "4",
+                "0"
+        );
+
+        // when
+
+        Schedule.main(null);
+
+        // then
+
+        Predicate<String> invalidOptionError =
+                output -> output.endsWith(Error.INVALID_OPTION.getMessage());
+
+        assertTrue(
+                getOutputs()
+                        .stream()
+                        .anyMatch(invalidOptionError)
+        );
+
+    }
 }
