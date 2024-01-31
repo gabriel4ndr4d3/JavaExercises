@@ -31,7 +31,7 @@ class ScheduleTest extends IOTest {
                 "janedoe@email.com",
                 "987654321",
                 "3",
-                "0"
+                "0" // exit
         );
 
         // when
@@ -72,7 +72,9 @@ class ScheduleTest extends IOTest {
                 "maria123@email.com",
                 "987654321",
                 "2",
-                "0"
+                "0",
+                "3",
+                "0" // exit
         );
 
         // when
@@ -105,7 +107,7 @@ class ScheduleTest extends IOTest {
         setInput(
                 "2",
                 "0",
-                "0"
+                "0" // exit
         );
 
         // when
@@ -131,7 +133,7 @@ class ScheduleTest extends IOTest {
 
         setInput(
                 "4",
-                "0"
+                "0" // exit
         );
 
         // when
@@ -158,7 +160,7 @@ class ScheduleTest extends IOTest {
 
         setInput(
                 "3",
-                "0"
+                "0" // exit
         );
 
         // when
