@@ -22,53 +22,78 @@ import java.util.Scanner;
  */
 public class Schedule {
 
-   private List<Contato> contatos = new ArrayList<>();
+    private List<Contato> contatos = new ArrayList<>();
+
+    private Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-       Schedule schedule =  new Schedule();
 
-       schedule.run();
+        Schedule schedule = new Schedule();
+
+        schedule.run();
 
     }
 
     private void run() {
-        Scanner teclado = new Scanner(System.in);
-
-        System.out.println("1 - Adicionar contato");
-        System.out.println("2 - Remover contato");
-        System.out.println("3 - Listar contatos");
-        System.out.println("0 - Sair");
 
         int opcao;
 
         do {
-            opcao = teclado.nextInt();
+
+            System.out.println("1 - Adicionar contato");
+            System.out.println("2 - Remover contato");
+            System.out.println("3 - Listar contatos");
+            System.out.println("0 - Sair");
+
+            opcao = Integer.parseInt(teclado.nextLine());
 
             switch (opcao) {
                 case 1:
                     addContact();
                     break;
+                case 2:
+                    removeContact();
+                    break;
+                case 3:
+                    listar();
+                    break;
             }
-
         } while (opcao != 0);
+
+    }
+
+    private void removeContact() {
+        System.out.println("Qual a posição?");
+
+        int index = Integer.parseInt(teclado.nextLine());
+        contatos.remove(index);
     }
 
     private void addContact() {
-        Scanner teclado = new Scanner(System.in);
 
-        System.out.print("Nome: ");
+        System.out.println("Nome: ");
         String name = teclado.nextLine();
 
-        System.out.print("Email: ");
+        System.out.println("Email: ");
         String email = teclado.nextLine();
 
-        System.out.print("Telefone: ");
+        System.out.println("Telefone: ");
         String telefone = teclado.nextLine();
 
         System.out.println("");
 
-        contatos.add(new Contato(name,email,telefone));
+        contatos.add(new Contato(name, email, telefone));
     }
+
+    private void listar() {
+        for (int i = 0; i < contatos.size(); i++) {
+
+            Contato contato = contatos.get(i);
+
+            System.out.printf("[%d] %s%n", i, contato);
+        }
+    }
+
 }
 

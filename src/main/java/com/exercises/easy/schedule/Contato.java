@@ -11,4 +11,11 @@ public class Contato {
         this.email = email;
         this.telefone = telefone;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s - %s", nome, email, telefone);
+
+    }
+
 }
