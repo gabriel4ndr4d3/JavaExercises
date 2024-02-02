@@ -27,16 +27,12 @@ public class Schedule {
     private Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-
         Schedule schedule = new Schedule();
 
         schedule.run();
-
     }
 
     private void run() {
-
         int opcao;
 
         do {
@@ -48,6 +44,8 @@ public class Schedule {
 
             opcao = Integer.parseInt(teclado.nextLine());
 
+            System.out.println("\n");
+
             switch (opcao) {
                 case 1:
                     addContact();
@@ -58,16 +56,26 @@ public class Schedule {
                 case 3:
                     listar();
                     break;
+                default:
+                    System.out.println(Error.INVALID_OPTION.getMessage());
+                    break;
             }
-        } while (opcao != 0);
 
+            System.out.println("\n");
+
+        } while (opcao != 0);
     }
 
     private void removeContact() {
         System.out.println("Qual a posição?");
 
         int index = Integer.parseInt(teclado.nextLine());
-        contatos.remove(index);
+
+        try {
+            contatos.remove(index);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(Error.INVALID_INDEX.getMessage());
+        }
     }
 
     private void addContact() {
@@ -81,12 +89,15 @@ public class Schedule {
         System.out.println("Telefone: ");
         String telefone = teclado.nextLine();
 
-        System.out.println("");
-
         contatos.add(new Contato(name, email, telefone));
     }
 
     private void listar() {
+
+        if (contatos.isEmpty()) {
+            System.out.println(Error.NO_CONTACTS.getMessage());
+        }
+
         for (int i = 0; i < contatos.size(); i++) {
 
             Contato contato = contatos.get(i);
@@ -94,6 +105,4 @@ public class Schedule {
             System.out.printf("[%d] %s%n", i, contato);
         }
     }
-
 }
-
